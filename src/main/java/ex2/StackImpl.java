@@ -12,10 +12,10 @@ public class StackImpl<T> implements Stack<T>{
 
     public boolean isEmpty() {
         if (table.length == 0){
-            return false;
+            return true;
         }
         else {
-            return true;
+            return false;
         }
     }
 
@@ -35,7 +35,7 @@ public class StackImpl<T> implements Stack<T>{
         if (table != null || table.length>0){
             T object = (T)table[table.length-1];
             Object[] newTable = new Object[table.length-1];
-            for (int i=0; i<newTable.length-1; i++){
+            for (int i=0; i<newTable.length; i++){
                 newTable[i] = table[i];
             }
             table = newTable;
